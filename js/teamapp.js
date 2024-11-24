@@ -2,8 +2,10 @@ import { getAvailablePlayers, assignPlayerToTeam, getTeams } from './team.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const availablePlayersContainer = document.getElementById('available-players');
-  const team1Container = document.getElementById('team-1');
-  const team2Container = document.getElementById('team-2');
+  const team1Container = document.getElementById('Rangers');
+  const team2Container = document.getElementById('Devils');
+  const team3Container = document.getElementById('Islanders');
+  const team3Container = document.getElementById('Sabres');
   const teamDisplay = document.getElementById('team-display');
 
   // Display available players
@@ -15,8 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
       playerDiv.classList.add('player');
       playerDiv.innerHTML = `
         <p>${player.name} - ${player.position}</p>
-        <button class="assign-btn" data-id="${player.id}" data-team="Team 1">Assign to Team 1</button>
-        <button class="assign-btn" data-id="${player.id}" data-team="Team 2">Assign to Team 2</button>
+        <button class="assign-btn" data-id="${player.id}" data-team="Rangers">Assign to Rangers</button>
+        <button class="assign-btn" data-id="${player.id}" data-team="Devils">Assign to Devils</button>
+        <button class="assign-btn" data-id="${player.id}" data-team="Islanders">Assign to Islanders</button>
+        <button class="assign-btn" data-id="${player.id}" data-team="Sabres">Assign to Sabres</button>
       `;
       availablePlayersContainer.appendChild(playerDiv);
     });
@@ -26,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function displayTeams() {
     team1Container.innerHTML = '';
     team2Container.innerHTML = '';
+    team3Container.innerHTML = '';
+    team4Container.innerHTML = '';
     const teams = getTeams();
 
     teams.forEach(team => {
