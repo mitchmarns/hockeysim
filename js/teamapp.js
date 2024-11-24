@@ -1,4 +1,4 @@
-import { getAvailablePlayers, assignPlayerToTeam, getTeams } from './teams.js';
+import { getAvailablePlayers, assignPlayerToTeam, getTeams } from './team.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const availablePlayersContainer = document.getElementById('available-players');
