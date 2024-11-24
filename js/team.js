@@ -1,4 +1,4 @@
-import playersData from 'data/players.json';
+import playersData from './data/players.json';
 
 export const teams = [
   {name: "Rangers", players: [], maxPlayers: 23 },
