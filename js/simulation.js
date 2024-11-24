@@ -1,4 +1,6 @@
+package game;
 
+import java.util.ArrayList;
 
 // click button for score between team a and b
 document.getElementById("simulate-button").addEventListener("click", () => {
