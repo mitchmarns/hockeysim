@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+
+// click button for score between team a and b
 document.getElementById("simulate-button").addEventListener("click", () => {
   const team1 = "Team A";
   const team2 = "Team B";
@@ -6,4 +9,4 @@ document.getElementById("simulate-button").addEventListener("click", () => {
 
   const result = `${team1}: ${score1}, ${team2}: ${score2}`;
   document.getElementById("game-result").innerText = result;
-});// Game Simulation
+});
