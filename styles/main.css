@@ -40,6 +40,10 @@ table th {
   background: #f4f4f4;
 }
 
+.team {
+      margin-bottom: 20px;
+    }
+
 #team-rosters {
   display: flex;
   flex-wrap: wrap;
@@ -61,6 +65,9 @@ ul li {
   margin: 5px 0;
 }
 
+.player {
+      margin-left: 20px;
+    }
 
 .player-stats {
   margin: 15px;
@@ -85,3 +92,7 @@ button {
 button:hover {
   background-color: #d32f2f;
 }
+
+.assign-btn {
+      margin-top: 5px;
+    }
