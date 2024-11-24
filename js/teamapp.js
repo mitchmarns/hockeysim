@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const team1Container = document.getElementById('Rangers');
   const team2Container = document.getElementById('Devils');
   const team3Container = document.getElementById('Islanders');
-  const team3Container = document.getElementById('Sabres');
+  const team4Container = document.getElementById('Sabres');
   const teamDisplay = document.getElementById('team-display');
 
   // Display available players
