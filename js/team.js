@@ -1,4 +1,12 @@
-import playersData from './data/players.json';
+async function loadPlayers() {
+  const response = await fetch('./data/players.json');
+  const data = await response.json();
+  return data.players; // Assuming the JSON has a "teams" key
+}
+
+export { loadPlayers };
+
+import java.util.ArrayList;
 
 export const teams = [
   {name: "Rangers", players: [], maxPlayers: 23 },
