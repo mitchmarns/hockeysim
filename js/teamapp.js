@@ -1,4 +1,4 @@
-import { getAvailablePlayers, assignPlayerToTeam, getTeams } from './team.js';
+import { loadPlayers, getAvailablePlayers, assignPlayerToTeam, getTeams } from './team.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const availablePlayersContainer = document.getElementById('available-players');
@@ -6,12 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const team2Container = document.getElementById('Devils');
   const team3Container = document.getElementById('Islanders');
   const team4Container = document.getElementById('Sabres');
-  const teamDisplay = document.getElementById('team-display');
+
+  await loadPlayers();
 
   // Display available players
   function displayAvailablePlayers() {
     availablePlayersContainer.innerHTML = ''; // Clear existing players
     const availablePlayers = getAvailablePlayers();
+    if (!availablePlayers || availablePlayers.length === 0) {
+      availablePlayersContainer.innerHTML = `<p>No available players at the moment.</p>`;
+      return;
+    }
+
     availablePlayers.forEach(player => {
       const playerDiv = document.createElement('div');
       playerDiv.classList.add('player');
@@ -34,7 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
     team4Container.innerHTML = '';
     const teams = getTeams();
 
-    teams.forEach(team => {
+    tteams.forEach(team => {
+      const teamContainer = {
+        "Rangers": team1Container,
+        "Devils": team2Container,
+        "Islanders": team3Container,
+        "Sabres": team4Container
+      }[team.name];
+
+      if (!teamContainer) return; // Skip invalid teams
+
       const teamDiv = document.createElement('div');
       teamDiv.classList.add('team');
       teamDiv.innerHTML = `<h2>${team.name}</h2>`;
@@ -46,11 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         teamDiv.appendChild(playerDiv);
       });
 
-      if (team.name === "Team 1") {
-        team1Container.appendChild(teamDiv);
-      } else {
-        team2Container.appendChild(teamDiv);
-      }
+      teamContainer.appendChild(teamDiv);
     });
   }
 
