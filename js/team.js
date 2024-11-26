@@ -43,5 +43,9 @@ export function assignPlayerToTeam(playerId, teamName) {
 
 // Get all teams
 export function getTeams() {
-  return teams;
+    { name: 'Rangers', players: [] },
+    { name: 'Devils', players: [] },
+    { name: 'Islanders', players: [] },
+    { name: 'Sabres', players: [] },
+  ];
 }
