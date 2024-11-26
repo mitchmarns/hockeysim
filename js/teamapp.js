@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const team3Container = document.getElementById('Islanders');
   const team4Container = document.getElementById('Sabres');
 
-  await loadPlayers();
-
   // Display available players
   function displayAvailablePlayers() {
     availablePlayersContainer.innerHTML = ''; // Clear existing players
