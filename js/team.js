@@ -1,8 +1,17 @@
-async function loadPlayers() {
-  const response = await fetch('./data/players.json');
-  const data = await response.json();
-  return data.players; // Assuming the JSON has a "teams" key
-}
+// Fetch JSON file hosted on GitHub Pages
+fetch('.data/players.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data); // Process your JSON data here
+  })
+  .catch(error => {
+    console.error('Error fetching the JSON file:', error);
+  });
 
 export { loadPlayers };
 
