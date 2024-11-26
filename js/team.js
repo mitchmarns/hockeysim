@@ -15,8 +15,6 @@ fetch('.data/players.json')
 
 export { loadPlayers };
 
-import from java.util.ArrayList;
-
 export const teams = [
   {name: "Rangers", players: [], maxPlayers: 23 },
   {name: "Devils", players: [], maxPlayers: 23 },
