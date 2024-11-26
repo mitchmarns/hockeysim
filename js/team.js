@@ -1,5 +1,5 @@
 // Fetch JSON file hosted on GitHub Pages
-fetch('.data/players.json')
+fetch('./data/players.json')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -59,9 +59,7 @@ export function assignPlayerToTeam(playerId, teamName) {
 }
 
 // Get all teams
+// Get all teams
 export function getTeams() {
-    { name: 'Rangers', players: [] },
-    { name: 'Devils', players: [] },
-    { name: 'Islanders', players: [] },
-    { name: 'Sabres', players: [] },
+  return teams; // Correctly return the `teams` array
 }
