@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Bear Cohen",
       "position": "Goalie",
-      "team": null,
+      "team": Rangers,
       "attributes": {
         "glove": 92,
         "stick": 89,
@@ -16,7 +16,7 @@
       "id": 11,
       "name": "Taylor Abbott",
       "position": "Left Winger",
-      "team": null,
+      "team": Devils,
       "attributes": {
         "shooting": 80,
         "passing": 85,
@@ -28,7 +28,7 @@
       "id": 16,
       "name": "Declan Thorne",
       "position": "Right Wing",
-      "team": null,
+      "team": Rangers,
       "attributes": {
         "shooting": 88,
         "passing": 75,
@@ -40,7 +40,7 @@
       "id": 29,
       "name": "Asher Wilde",
       "position": "Defense",
-      "team": null,
+      "team": Devils,
       "attributes": {
         "shooting": 80,
         "passing": 85,
@@ -52,7 +52,7 @@
       "id": 34,
       "name": "Hunter Owens",
       "position": "Center",
-      "team": null,
+      "team": Rangers,
       "attributes": {
         "shooting": 95,
         "passing": 90,
